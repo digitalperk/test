@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+</head>
+<body>
+<script src="https://cdn.auth0.com/js/lock/10.20/lock.min.js"></script>
+<script>
+  var lock = new Auth0Lock('N5YoBP2avZV405vFYjnitKSkNFC3h3yw', 'amrax.auth0.com', {
+    auth: {
+      redirectUrl: 'https://localhost:8080',
+      responseType: 'code',
+      params: {
+        scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
+      }
+    }
+  });
+</script>
+<button onclick="lock.show();">Login</button>
+</body>
+</html>
